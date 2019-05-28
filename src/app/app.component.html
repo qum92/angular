@@ -1,0 +1,7 @@
+<nav *ngif(!app-home)>
+<app-login></app-login>
+</nav>
+<nav *ngif(!app-login)>
+<app-home></app-home>
+</nav>
+<router-outlet></router-outlet>

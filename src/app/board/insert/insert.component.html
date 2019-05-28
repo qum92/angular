@@ -1,0 +1,72 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" routerLink='board' (click)="goPage('board')">Start LookCar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" routerLink='Home' (click)="goPage('Home')">Home</a>
+          </li>  
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">MyPage</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <header class="bg-primary text-white">
+    <div class="container text-center">
+      <h1>룩카에 오신것을 환영합니다.</h1>
+      <p class="lead">고객님들을 위해서 최선을 다해 열심히 뛰겠습니다.</p>
+    </div>
+  </header>
+<br>
+<div align="center">
+    <button type="button" class="btn btn-primary">등록하실 차량의 정보를 입력해주세요.</button>
+</div><br>
+<div align="center">
+    <label for="insertCar"></label>
+    <input type="text" id="carCompany" [(ngModel)]="board.carCompany" placeholder="제조회사">
+  </div>
+  <div align="center">
+    <input type="text" id="carCountry" [(ngModel)]="board.carCountry" placeholder="제조국가">
+  </div>
+  <div align="center">
+    <input type="text" id="carType" [(ngModel)]="board.carType" placeholder="차종">
+  </div>
+  <div align="center">
+    <input type="text" id="carModel" [(ngModel)]="board.carModel" placeholder="차모델">
+  </div>
+  <div align="center">
+    <input type="text" id="carYear" [(ngModel)]="board.carYear" placeholder="제조년도">
+  </div>
+  <div align="center">
+    <input type="text" id="carEngine" [(ngModel)]="board.carEngine" placeholder="배기량">
+  </div>
+  <div align="center">
+    <input type="text" id="carSale" [(ngModel)]="board.carSale" placeholder="판매가격">
+  </div>
+  <div align="center">
+    <input type="text" id="carOil" [(ngModel)]="board.carOil" placeholder="주유타입">
+  </div>
+  <div align="center">
+    <input type="text" id="carMethod" [(ngModel)]="board.carMethod" placeholder="구동방식">
+  </div>
+  <div align="center">
+    <input type="text" id="carPerson" [(ngModel)]="board.carPerson" placeholder="인승">
+  </div><br>
+  <div align="center">
+    <input type="file" (change)="getFiles($event)">
+  </div><br>
+  <div align="center">
+  <button type="button" (click)="doInsert()" class="btn btn-primary">등록하기</button>
+  <button type="button" (click)="goPage('board')" class="btn btn-primary">돌아가기</button>
+</div>
